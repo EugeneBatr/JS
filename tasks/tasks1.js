@@ -21,3 +21,46 @@ const numbers = [1, 2, 3, 4, 5, 6, 7];
 // };
 // console.log(somevalue(numbers));
 
+
+
+
+///////ДОМАШКА!!///////
+
+//TODO 1
+
+// const multi =(arr) => {
+//         if (!Array.isArray(arr)) return;
+//         return arr.map((number) => {
+//                 return `${number * 3}`
+//         });
+// };
+// console.log(multi(numbers))
+
+
+//TODO 2
+
+// const sqr = (arr) => {
+//         if (!Array.isArray(arr)) return;
+//         return arr.map((number, index, array) => {
+//                 if (index === 0 || index === arr.length - 1) {
+//                         return Math.pow(index, 2);
+//                 }
+//                 return `${index + 1}`
+
+//         });
+// };
+// console.log(sqr(numbers))
+
+
+//TODO 3
+
+// const words = ['Hello', 'kek', 'aws', 'world', 'I love this fucking JavaScript'];
+// const sqr = (arr) => {
+//         if (!Array.isArray(arr)) return;
+//         return arr.filter((string, index, array) => {
+//                 if (string.length > 3) {
+//                         return (`${string}`);
+//                 }
+//         });
+// };
+// console.log(sqr(words))
