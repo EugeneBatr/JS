@@ -45,7 +45,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7];
 //                 if (index === 0 || index === arr.length - 1) {
 //                         return Math.pow(index, 2);
 //                 }
-//                 return `${index + 1}`
+//                 return `${number + 1}`
 
 //         });
 // };
@@ -64,3 +64,15 @@ const numbers = [1, 2, 3, 4, 5, 6, 7];
 //         });
 // };
 // console.log(sqr(words))
+
+
+//TODO 4
+
+// v1
+// const sum = (arr) => {
+//         if (!Array.isArray(arr)) return;
+//         return arr.reduce((summ, current) =>
+//                 summ + current,
+//                 0);
+// };
+// console.log(sum(numbers));
