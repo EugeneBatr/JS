@@ -205,82 +205,128 @@ const some = [1, 2, 6, 'hello', null];
 
 ///////////////////////////////////////////////////////
 
-const users = [
-        {
-                id: 1,
-                first_name: 'Jeanette',
-                last_name: 'Penddreth',
-                email: 'jpenddreth0@census.gov',
-                gender: 'Female',
-                ip_address: '26.58.193.2',
-        },
-        {
-                id: 2,
-                first_name: 'Petr',
-                last_name: 'Jackson',
-                email: 'gfrediani1@senate.gov',
-                gender: 'Male',
-                ip_address: '229.179.4.212',
-        },
-];
+// const users = [
+//     {
+//         id: 1,
+//         first_name: 'Jeanette',
+//         last_name: 'Penddreth',
+//         email: 'jpenddreth0@census.gov',
+//         gender: 'Female',
+//         ip_address: '26.58.193.2',
+//     },
+//     {
+//         id: 2,
+//         first_name: 'Petr',
+//         last_name: 'Jackson',
+//         email: 'gfrediani1@senate.gov',
+//         gender: 'Male',
+//         ip_address: '229.179.4.212',
+//     },
+// ];
 
-const sorter = (userArray) => {
-        if (!Array.isArray(userArray)) return;
-        return userArray.reduce(
-                (result, user) => {
-                        const userToInsert = {
-                                id: user.id,
-                                fullName: `${user.first_name} ${user.last_name}`,
-                                email: user.email,
-                                gender: user.gender,
-                                ip_address: user.ip_address,
-                        };
-                        if (userToInsert.gender.toLowerCase() === 'male') {
-                                result.men.push(userToInsert);
-                        } else {
-                                result.women.push(userToInsert);
-                        }
-                        return result;
-                },
-                { men: [], women: [] }
-        );
-
-
-};
-console.log(sorter(users));
+// const sorter = (userArray) => {
+//     if (!Array.isArray(userArray)) return;
+//     return userArray.reduce(
+//         (result, user) => {
+//             const userToInsert = {
+//                 id: user.id,
+//                 fullName: `${user.first_name} ${user.last_name}`,
+//                 email: user.email,
+//                 gender: user.gender,
+//                 ip_address: user.ip_address,
+//             };
+//             if (userToInsert.gender.toLowerCase() === 'male') {
+//                 result.men.push(userToInsert);
+//             } else {
+//                 result.women.push(userToInsert);
+//             }
+//             return result;
+//         },
+//         { men: [], women: [] }
+//     );
 
 
+// };
+// console.log(sorter(users));
 
+/////////////////////////////////////////////////////////////////////////////
 
 // const initialData = [
-//         {
-//                 username: 'Maria',
-//                 age: 25,
-//         },
-//         {
-//                 username: 'Alex',
-//                 age: 21,
-//         },
-//         {
-//                 username: 'Oleg',
-//                 age: 14,
-//         },
-//         {
-//                 username: 'Dmitriy',
-//                 age: 35,
-//         },
-//         {
-//                 username: 'Oksana',
-//                 age: 72,
-//         },
+//     {
+//         username: 'Maria',
+//         age: 25,
+//     },
+//     {
+//         username: 'Alex',
+//         age: 21,
+//     },
+//     {
+//         username: 'Oleg',
+//         age: 14,
+//     },
+//     {
+//         username: 'Dmitriy',
+//         age: 35,
+//     },
+//     {
+//         username: 'Oksana',
+//         age: 72,
+//     },
 // ];
 
 
 
-// const filterUsersByAge = (arr) => {
-//         if (!Array.isArray) return;
-//         return arr.filter((user) => user.age >= 21);
-
+// const userSorter = (arr) => {
+//     if (!Array.isArray) return;
+//     return arr.filter((user) => user.age >= 21).sort((prevUser, nextUser) => {
+//         return prevUser.username > nextUser.username ? 1 : -1
+//     })
 // }
-// console.log(filterUsersByAge(initialData));
+// console.log(userSorter(initialData));
 
+////////////////////////////////////////////////////////////////
+
+// const users = [
+//     {
+//         id: 1,
+//         name: 'Alex',
+//     },
+//     {
+//         id: 2,
+//         name: 'Tamara',
+//     },
+//     {
+//         id: 3,
+//         name: 'Max',
+//     },
+// ];
+
+// const removeUsers = (usersArray, usersToRemove) => {
+//     if (!Array.isArray(usersArray) || !Array.isArray(usersToRemove)) return;
+
+//     return usersArray.filter((user) => !usersToRemove.includes(user.id));
+// };
+// console.log(removeUsers(users, [2]));
+
+//////////////////////////////////////////////////////////////////
+
+let head = {
+    glasses: 1
+};
+
+let table = {
+    pen: 3,
+    __proto__: head
+};
+
+let bed = {
+    sheet: 1,
+    pillow: 2,
+    __proto__: table
+};
+
+let pockets = {
+    money: 2000,
+    __proto__: bed
+};
+console.log(pockets.pen);
