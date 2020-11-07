@@ -1,0 +1,7 @@
+.container {
+    padding: 15px;
+    border: 1px solid black;
+}
+.withRedBorder {
+    border-color: red;
+}
