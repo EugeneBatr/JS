@@ -1,5 +1,17 @@
-const containerElement = document.querySelector(".container");
 const inputElement = document.querySelector("input");
-containerElement.classList.add("withRedBorder");
-inputElement.setAttribute("type", "password");
-console.log(1);
+const submitButtom = document.querySelector(".submit");
+// const containerElement = document.querySelector(".container");
+
+
+submitButtom.addEventListener("click", () => {
+    const inputTypeToSet = inputElement.type === 'text' ? "password" : "text";
+    inputElement.setAttribute("type", inputTypeToSet);
+});
+
+// submitButtom.addEventListener("click", (event) => {
+//     event.stopPropagation();
+//     alert("YOOO, You click the buttom!")
+// });
+
+
+
